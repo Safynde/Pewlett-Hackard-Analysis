@@ -44,7 +44,8 @@ SELECT * FROM unique_titles;
 
 SELECT COUNT(title), title
 INTO retiring_titles
-FROM unique_titles
+FROM retirement_titles
+WHERE to_date ='9999-01-01'
 GROUP BY title
 ORDER BY count DESC;
 
@@ -69,5 +70,3 @@ AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY e.emp_no;
 
 SELECT * FROM mentorship_eligibility
-
-
